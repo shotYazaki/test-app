@@ -5,7 +5,7 @@ app.get('/', (req, res) => {
     res.render('index.ejs',　{title: 'Soccer world cup'});
 });
 
-app.get('/login.ejs', (req, res) => {
+app.get('/login', (req, res) => {
     res.render('login.ejs');
 });
 
