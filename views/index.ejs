@@ -13,6 +13,21 @@
                 <br>
                 <button type="submit" class="submit">ボードを作成する</button>
             </form>
+            <ul class="table-body">
+                <% boards.forEach((board) => { %>
+                    <li>
+                        <div class="board-data">
+                            <span class="id-column"><%= board.id %></span>
+                            <span class="title-column"><%= board.title></span>
+                        </div>
+                        <div class="board-menu">
+                            <form action="/delete<%= board.id %>" method="post">
+                                <input type="submit" value="削除">
+                            </form>
+                        </div>
+                    </li>
+                <%}) %>
+            </ul>
             <a href="/" class="button">back to home</a>
         </div>
     </main>

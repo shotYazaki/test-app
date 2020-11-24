@@ -39,9 +39,9 @@ app.get('/index', (req, res) => {
   );
 });
 
-app.post('/create/:user_id', (req, res) => {
+app.post('/register', (req, res) => {
   connection.query(
-    'INSERT INTO users (email) VALUES (?)',
+    'INSERT INTO users (email, password) VALUES (?)',
     [req.body.user_id],
     (error, result) => {
       res.redirect('/index');
