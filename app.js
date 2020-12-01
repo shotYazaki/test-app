@@ -30,25 +30,4 @@ app.get('/login', (req, res) => {
   res.render('login.ejs');
 });
 
-app.get('/index', (req, res) => {
-  connection.query(
-    'SELECT * FROM boards',
-    (error, results) => {
-      res.render('index.ejs', {boards: results});
-    }
-  );
-});
-
-app.post('/register', (req, res) => {
-  connection.query(
-    'INSERT INTO users (email, password) VALUES (?)',
-    [req.body.user_id],
-    (error, result) => {
-      res.redirect('/index');
-    }
-  );
-});
-
-
-
-app.listen(3000);
+r
