@@ -30,4 +30,5 @@ app.get('/login', (req, res) => {
   res.render('login.ejs');
 });
 
-r
+
+app.listen(3000);
