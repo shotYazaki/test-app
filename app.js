@@ -30,5 +30,8 @@ app.get('/login', (req, res) => {
   res.render('login.ejs');
 });
 
+app.get('/index', (req, res) => {
+  res.render('index.ejs');
+});
 
 app.listen(3000);
